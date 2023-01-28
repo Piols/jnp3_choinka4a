@@ -290,7 +290,7 @@ HRESULT PopulateCommandList(HWND hwnd) {
 
     commandList->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
     commandList->IASetVertexBuffers(0, 1, &vertexBufferView);
-    commandList->DrawInstanced(NUM_VERTICES, NUM_VERTICES / 3, 0, 0);
+    commandList->DrawInstanced(NUM_VERTICES, 1, 0, 0);
 
 	D3D12_RESOURCE_BARRIER barrier2 = {
 		.Type = D3D12_RESOURCE_BARRIER_TYPE_TRANSITION,
